@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Sevice</title>
+
+    <link rel="stylesheet" href="../src/reset.css" />
+
+    <style>
+      .main {
+        width: 100%;
+        height: 84px;
+        padding: 12px;
+        color: var(--white);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #424242;
+        margin-bottom: 10%;
+      }
+
+      .main #logo {
+        width: 20%;
+        font-size: 32px;
+        color: transparent;
+        text-align: center;
+        text-transform: uppercase;
+        background-image: linear-gradient(to right, #ffa400, #00aefd);
+        -webkit-background-clip: text;
+      }
+
+      .main .menu {
+        font-size: 18px;
+        color: var(--white);
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+      }
+
+      .main #user {
+        width: 20%;
+        text-align: center;
+        /* display: inline-flex; */
+      }
+
+      .main #user > button {
+        margin: 6px;
+        border-radius: 8px;
+        color: #fff;
+        text-transform: capitalize;
+        padding: 12px 24px;
+        background-color: #247ba0;
+      }
+
+      .wraper {
+        /* margin-bottom: 5%; */
+        width: 100%;
+        height: auto;
+        /* text-align: center; */
+      }
+      .wraper-title {
+        margin-top: 15%;
+        margin-left: 3%;
+        font-size: 40px;
+        font-weight: bold;
+      }
+
+      .body-wrapper {
+        width: 100%;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        /* marign-left: 2%; */
+        text-align: center;
+        display: grid;
+        /* flex-direction: row; */
+        grid-template-columns: 1fr 1fr;
+        column-gap: 5%;
+      }
+      /* .basic,
+      .adven {
+         width: fit-content;
+      }*/
+      .basic-wrapper,
+      .adven-wrapper {
+        margin: 0 auto;
+        /* max-width: 100%; */
+        width: 450px;
+        height: auto;
+      }
+
+      .basic-wrapper > img {
+        width: 100%;
+        border-radius: 10.078px;
+        border: 3.023px solid #000;
+        background: lightgray 50% / cover no-repeat, #d9d9d9;
+      }
+
+      .adven-wrapper > img {
+        width: 100%;
+        border-radius: 10.078px;
+        border: 3.023px solid #000;
+        background: lightgray 50% / cover no-repeat, #d9d9d9;
+      }
+      .basic-wrapper > p {
+        font-size: 20.156px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        /* width: fit-content; */
+        /* margin-left: 5%; */
+      }
+      .adven-wrapper > p {
+        font-size: 20.156px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+
+      .adven > div > span {
+        color: #000;
+        /* margin-left: 3%; */
+      }
+      .body-basic,
+      .body-adven {
+        /* marign-left: 50px; */
+      }
+      .basic > .body-basic,
+      .body-adven > span,
+      .learnBt {
+        /* text-align: justify; */
+        /* font-family: Poppins; */
+        font-size: 20.156px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      }
+      .learnBt > button {
+        border-radius: 8px;
+        background: #65e190;
+        padding: 0.3em;
+      }
+      /* .body-basic {
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+      } */
+
+      .adven > div {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        /* marign-left: 3%; */
+      }
+      .basic > div {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+      }
+
+      nav {
+        /*  */
+        width: 100%;
+        height: auto;
+        text-align: center;
+      }
+
+      .title-nav {
+        marign-top: 5%;
+        color: #000;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 32.25px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+      }
+
+      footer {
+        margin-top: 3%;
+        width: 100%;
+        height: 20em;
+        background: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      footer > .body-footer {
+        /* width: 100%; */
+        background: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .content-footer {
+        margin-top: 3%;
+        margin-left: 7%;
+        margin-right: 7%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      footer > .body-footer > .content-footer > p,
+      .content-footer > span {
+        color: white;
+      }
+      footer > .body-footer > .content-footer > span {
+        font-size: 25px;
+      }
+      footer > .body-footer > .content-footer > p {
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 5%;
+      }
+      i {
+        color: white;
+        font-size: 25px;
+
+        cursor: pointer;
+      }
+      .end-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .end-footer > a {
+        border: none;
+        background: black;
+        margin: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="main">
+      <h1 id="logo"><a href="../index.html">Iron Club</a></h1>
+      <ul class="menu">
+        <li class="menu-item"><a href="./classes.html">Classes</a></li>
+        <li class="menu-item"><a href="./service.html">Services</a></li>
+        <li class="menu-item"><a href="./plan.html">Plan</a></li>
+        <!-- <li class="menu-item"><a href="./signup.html">Sign Up</a></li> -->
+        <!-- <li class="menu-item"><a href="#">Q&A</a></li>
+          <li class="menu-item"><a href="./pages/schedule.html">About</a></li> -->
+        <!-- <li class="list-main"><a href="#"> About</a></li> -->
+      </ul>
+
+      <div id="user">
+        <button type="button"><a href="./signup.html"> Sign Up</a></button>
+      </div>
+    </section>
+    <wrapper class="wraper">
+      <p class="wraper-title">
+        OUR SERVICE
+      </p>
+
+      <div class="body-wrapper">
+        <div class="basic-wrapper">
+          <img
+            src="https://i.pinimg.com/564x/8c/af/43/8caf43427ce9a86d2e8ace95de73274c.jpg"
+            alt=""
+          />
+          <p>BASIC</p>
+          <div class="basic">
+            <div class="body-basic">
+              <span>Simple exercises</span>
+              <span>Stretching and flexibility</span>
+              <div class="learnBt">
+                <span>Strength training</span>
+                <button><a href="./plan.html">Learn more</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="adven-wrapper">
+          <img
+            src="https://i.pinimg.com/564x/16/9a/d7/169ad7a02b809e5c4b8493e8bbc08f11.jpg"
+            alt=""
+          />
+          <p>UNLIMITED</p>
+          <div class="adven">
+            <div class="body-adven">
+              <span>Professional bodybuilding</span>
+              <span>Weight pressure</span>
+              <div class="learnBt">
+                <span>Classic physique </span>
+                <button><a href="./plan.html">Learn more</a></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </wrapper>
+
+    <nav class="nav">
+      <p class="title-nav">GET YOUR BODY TRANSFORMATION IN 60 DAYS !!!</p>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/qV-kw7l_ZNk?si=bEQLvMvmj1b-kHEJ"
+        title="YouTube video player"
+        frameborder="0"
+        border-radius:8px;
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen
+      ></iframe>
+
+      <!-- <video
+        src="https://drive.google.com/file/d/17hoStBd1HkctkcJ9GMHz5lXFnvw4NS1J/view?usp=drive_link"
+      ></video> -->
+    </nav>
+
+    <footer>
+      <div class="body-footer">
+        <div class="content-footer">
+          <p>WORKING</p>
+          <span>Morning 5:00 AM - 12:00 AM</span>
+          <span>Afternoon 1:30 PM - 12:00 PM</span>
+        </div>
+        <div class="content-footer">
+          <p>INFORMATION</p>
+          <span>Number Phone 0348788906</span>
+          <span>Gmail nghiak901@gmail.com</span>
+        </div>
+      </div>
+      <div class="end-footer">
+        <a href="https://twitter.com/home?lang=en" target="_blank">
+          <i class="bi bi-twitter"></i>
+        </a>
+        <a href="https://www.facebook.com/" target="_blank">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <i class="bi bi-instagram"></i>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

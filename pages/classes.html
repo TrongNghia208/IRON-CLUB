@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Classes</title>
+
+    <link rel="stylesheet" href="../src/reset.css" />
+
+    <style>
+      html {
+        background: black;
+      }
+      .main {
+        width: 100%;
+        height: 84px;
+        padding: 12px;
+        color: var(--white);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #424242;
+        margin-bottom: 10%;
+      }
+
+      .main #logo {
+        width: 20%;
+        font-size: 32px;
+        color: transparent;
+        text-align: center;
+        text-transform: uppercase;
+        background-image: linear-gradient(to right, #ffa400, #00aefd);
+        -webkit-background-clip: text;
+      }
+
+      .main .menu {
+        font-size: 18px;
+        color: var(--white);
+        display: flex;
+        flex: 1;
+        justify-content: space-around;
+      }
+
+      .main #user {
+        width: 20%;
+        text-align: center;
+        /* display: inline-flex; */
+      }
+
+      .main #user > button {
+        margin: 6px;
+        border-radius: 8px;
+        color: #fff;
+        text-transform: capitalize;
+        padding: 12px 24px;
+        background-color: #247ba0;
+      }
+      .wrapper {
+        /* margin-top: 100px; */
+
+        width: 100%;
+        height: auto;
+      }
+      .title-wrapper {
+        color: #fff;
+        margin-top: 160px;
+        margin-bottom: 10%;
+        margin-left: 3%;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      .contents-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        /* grid-template-rows: 1fr 1fr 1fr 1fr; */
+        grid-column-gap: 10%;
+
+        /* grid-row-gap: 5%; */
+        margin-left: 3%;
+        margin-right: 3%;
+      }
+
+      .wrapper-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-bottom: 7%;
+      }
+      .wrapper-content > a > img {
+        max-width: 100%;
+        height: auto;
+        transition: transform 1s;
+      }
+
+      .wrapper-content > a > img:hover {
+        -ms-transform: scale(1.5); /* IE 9 */
+        -webkit-transform: scale(1.5); /* Safari 3-8 */
+        transform: scale(1.05);
+      }
+
+      .title-wrapper {
+        color: white;
+      }
+
+      .wrapper-content > a {
+        color: white;
+        font-size: 30px;
+        font-weight: bold;
+        margin-top: 1%;
+      }
+
+      aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: #fff;
+        width: 100%;
+        height: 20em;
+        margin-top: 5%;
+        margin-bottom: 5%;
+      }
+
+      aside > div > p {
+        margin: 0 0 2% 3%;
+        color: black;
+        font-size: 40px;
+        font-weight: bold;
+      }
+      aside > div > button {
+        padding: 1em;
+        border: none;
+        background: red;
+        font-size: 20px;
+        color: white;
+        margin-left: 3%;
+      }
+
+      footer {
+        width: 100%;
+        height: 20em;
+        background: black;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      footer > .body-footer {
+        /* width: 100%; */
+        background: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .content-footer {
+        margin-top: 3%;
+        margin-left: 7%;
+        margin-right: 7%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      footer > .body-footer > .content-footer > p,
+      span {
+        color: white;
+      }
+      footer > .body-footer > .content-footer > span {
+        font-size: 25px;
+      }
+      footer > .body-footer > .content-footer > p {
+        font-weight: bold;
+        font-size: 30px;
+        margin-bottom: 5%;
+      }
+      i {
+        color: white;
+        font-size: 25px;
+
+        cursor: pointer;
+      }
+      .end-footer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+      .end-footer > a {
+        border: none;
+        background: black;
+        margin: 2%;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="main">
+      <h1 id="logo"><a href="../index.html">Iron Club</a></h1>
+      <ul class="menu">
+        <li class="menu-item"><a href="./classes.html">Classes</a></li>
+        <li class="menu-item"><a href="./service.html">Services</a></li>
+        <li class="menu-item"><a href="./plan.html">Plan</a></li>
+        <!-- <li class="menu-item"><a href="./signup.html">Sign Up</a></li> -->
+        <!-- <li class="menu-item"><a href="#">Q&A</a></li>
+              <li class="menu-item"><a href="./pages/schedule.html">About</a></li> -->
+        <!-- <li class="list-main"><a href="#"> About</a></li> -->
+      </ul>
+
+      <div id="user">
+        <button><a href="./signup.html"> Sign Up</a></button>
+      </div>
+    </section>
+    <wrapper class="wrapper">
+      <p class="title-wrapper">CLASSES</p>
+      <div class="contents-wrapper">
+        <!-- calisthenis -->
+        <div class="wrapper-content">
+          <a href="../all-class/calisthenics.html"
+            ><img
+              src="https://i.pinimg.com/564x/d8/a7/23/d8a723d8a784c23322261fb8b439c53b.jpg"
+              alt=""
+              class="img-nav"
+          /></a>
+          <a href="../all-class/calisthenics.html" class="contents-img"
+            >Calisthenics</a
+          >
+        </div>
+        <!-- cardio -->
+        <div class="wrapper-content">
+          <a href="../all-class/cardio.html">
+            <img
+              src="https://i.pinimg.com/564x/98/32/6a/98326a67664940c021542bfea54cf323.jpg"
+              alt=""
+              class="img-nav"
+          /></a>
+
+          <a href="" class="contents-img">Cardio</a>
+        </div>
+
+        <!-- Air yoga -->
+        <div class="wrapper-content">
+          <a href="../all-class/yoga.html">
+            <img
+              src="https://i.pinimg.com/564x/0d/28/f0/0d28f0ea99ea03b527208f5ec40521fc.jpg"
+              alt=""
+              class="img-nav"
+          /></a>
+
+          <a href="../all-class/yoga.html" class="contents-img">Air Yoga</a>
+        </div>
+
+        <!-- kick boxing -->
+        <div class="wrapper-content">
+          <a href="../all-class/kickboxing.html">
+            <img
+              src="https://i.pinimg.com/564x/02/90/58/029058213eb20928e110d829f0084b3c.jpg"
+              alt=""
+              class="img-nav"
+          /></a>
+
+          <a href="../all-class/kickboxing.html" class="contents-img"
+            >Kick Boxing</a
+          >
+        </div>
+
+        <!-- mma -->
+        <div class="wrapper-content">
+          <a href="../all-class/mma.html">
+            <img
+              src="https://i.pinimg.com/564x/17/49/c2/1749c2cf1c776292a6a79c29a6734547.jpg"
+              alt=""
+              class="img-nav"
+          /></a>
+
+          <a href="../all-class/mma.html" class="contents-img">MMA</a>
+        </div>
+        <!-- judo -->
+        <div class="wrapper-content">
+          <a href="../all-class/judo.html">
+            <img
+              src="https://i.pinimg.com/564x/0f/e9/54/0fe954634233ea85687231fb171a42a8.jpg"
+              alt=""
+              class="img-nav"
+          /></a>
+
+          <a href="../all-class/judo.html" class="contents-img">Judo</a>
+        </div>
+
+        <!-- dance sport-->
+        <div class="wrapper-content">
+          <a href="../all-class/dance.html">
+            <img
+              src="https://i.pinimg.com/564x/2a/f0/ab/2af0abb50df2c4373d44c9ccf521fc74.jpg"
+              alt=""
+              class="img-nav"
+          /></a>
+
+          <a href="../all-class/dance.html" class="contents-img">Dance Sport</a>
+        </div>
+
+        <!-- body building -->
+        <div class="wrapper-content">
+          <a href="../all-class/bodybuilding.html">
+            <img
+              src="https://i.pinimg.com/564x/f6/e2/1b/f6e21b6d0cf83ffeeed83f4dd4ac9420.jpg"
+              alt=""
+              class="img-nav"
+          /></a>
+
+          <a href="../all-class/bodybuilding.html" class="contents-img"
+            >Body Building</a
+          >
+        </div>
+
+        <!-- taekwondo -->
+        <div class="wrapper-content">
+          <a href="../all-class/taekwondo.html">
+            <img
+              src="https://i.pinimg.com/564x/a8/6c/5a/a86c5ae61d3dfbfe7975922974af1b63.jpg"
+              alt=""
+              class="img-nav"
+          /></a>
+
+          <a href="../all-class/taekwondo.html" class="contents-img"
+            >Taekwondo</a
+          >
+        </div>
+
+        <!-- akido -->
+        <div class="wrapper-content">
+          <a href="../all-class/akido.html">
+            <img
+              src="https://i.pinimg.com/564x/ed/b1/92/edb19210e1362d90aa5ca105b2e9ffdc.jpg"
+              alt=""
+              class="img-nav"
+          /></a>
+
+          <a href="../all-class/akido.html" class="contents-img">Akido</a>
+        </div>
+
+        <!-- karate -->
+        <div class="wrapper-content">
+          <a href="../all-class/karate.html">
+            <img
+              src="https://i.pinimg.com/564x/a8/97/4b/a8974b472d615911d61e585332c55b3a.jpg"
+              alt=""
+              class="img-nav"
+          /></a>
+
+          <a href="../all-class/karate.html" class="contents-img">Karatedo</a>
+        </div>
+
+        <!-- nuchaku -->
+
+        <div class="wrapper-content">
+          <a href="../all-class/nunchaku.html">
+            <img
+              src="https://i.pinimg.com/564x/32/cf/9e/32cf9e18d3ab11370a7e240924a05814.jpg"
+              alt=""
+              class="img-nav"
+          /></a>
+
+          <a href="../all-class/nunchaku.html" class="contents-img">Nunchaku</a>
+        </div>
+      </div>
+    </wrapper>
+
+    <aside class="aside">
+      <div>
+        <p>ARE YOU READY?</p>
+        <button><a href="./signup.html">Let's started for changes</a></button>
+      </div>
+    </aside>
+
+    <footer>
+      <div class="body-footer">
+        <div class="content-footer">
+          <p>WORKING</p>
+          <span>Morning 5:00 AM - 12:00 AM</span>
+          <span>Afternoon 1:30 PM - 12:00 PM</span>
+        </div>
+        <div class="content-footer">
+          <p>INFORMATION</p>
+          <span>Number Phone 0348788906</span>
+          <span>Email nghiak901@gmail.com</span>
+        </div>
+      </div>
+
+      <div class="end-footer">
+        <a href="https://twitter.com/home?lang=en" target="_blank">
+          <i class="bi bi-twitter"></i>
+        </a>
+        <a href="https://www.facebook.com/" target="_blank">
+          <i class="bi bi-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <i class="bi bi-instagram"></i>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>

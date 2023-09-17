@@ -1,0 +1,46 @@
+/* boostrap icon */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
+
+/* font */
+/* @import url("https://fonts.googleapis.com/css2?family=Inter&family=Oswald:wght@500&family=Passion+One&family=Poppins:wght@600&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Inter&family=Lexend&family=Oswald:wght@500&family=Passion+One&family=Poppins:wght@600&display=swap"); */
+
+@import url("https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Inter&family=Lexend&family=Oswald:wght@500&family=Passion+One&family=Poppins:wght@600&family=Roboto:ital,wght@0,400;0,500;1,400;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+:root {
+  --white: #fff;
+}
+input {
+  border: none;
+}
+ul,
+ol,
+li {
+  list-style: none;
+  list-style-type: none;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+  border: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+span,
+h1,
+h2 {
+  cursor: default;
+}
